@@ -14,4 +14,11 @@ public enum Status{
     public String toString(){
         return label;
     }
+
+    public static Status parseStatus(String s){
+        if (s.equals("Complete")){
+            return Status.DONE;
+        }
+        return Status.NOT_DONE;
+    }
 }

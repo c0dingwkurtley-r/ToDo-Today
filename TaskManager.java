@@ -12,8 +12,8 @@ public class TaskManager{
 
     public TaskManager(String filename){
 //      load existing tasks from file
-        loadFromFile();
         this.filename = filename;
+        loadFromFile();
     }
 
     private void loadFromFile(){

@@ -25,8 +25,12 @@ public class Task {
         return task;
     }
 
-    public void setStatus(){
-        status = Status.DONE;
+    public void setStatus(Status status){
+        if (status == Status.NOT_DONE) {
+            this.status = Status.DONE;
+        } else {
+            this.status = Status.NOT_DONE;
+        }
     }
 
 //    edit task description

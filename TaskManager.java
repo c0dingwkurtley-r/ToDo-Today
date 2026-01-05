@@ -76,7 +76,7 @@ public class TaskManager{
 //    return a string displaying all tasks, numbered in an appropriate manner
     public String toString(){
         StringBuilder sb = new StringBuilder();
-        int i = 0;
+        int i = 1;
         for (Task t: list){
             sb.append(String.format("%d. %s : %s%n",i,t.getTask(),t.getStatus()));
             i++;

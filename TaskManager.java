@@ -58,18 +58,18 @@ public class TaskManager{
     }
 
     public void deleteTask(int index){
-        list.remove(index);
+        list.remove(index-1); //task numbering starts at 1 but indexing at zero
     }
 
 //    change task status
     public void changeStatus(int index){
-        Task t = list.get(index);
+        Task t = list.get(index-1); //task numbering starts at 1 but indexing at zero
         t.setStatus(Status.parseStatus(t.getStatus()));
     }
 
 //    change a current task description
     public void changeTask(int index, String newTask){
-        Task t = list.get(index);
+        Task t = list.get(index-1); //task numbering starts at 1 but indexing at zero
         t.setTask(newTask);
     }
 

@@ -61,10 +61,10 @@ public class TaskManager{
         list.remove(index);
     }
 
-//    mark task as complete
-    public void completeTask(int index){
+//    change task status
+    public void changeStatus(int index){
         Task t = list.get(index);
-        t.setStatus();
+        t.setStatus(Status.parseStatus(t.getStatus()));
     }
 
 //    change a current task description

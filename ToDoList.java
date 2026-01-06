@@ -27,7 +27,7 @@ public class ToDoList {
             in.nextLine();
             menuAction();
         } else {
-            System.out.println("Error: Please enter a valid menu option (1 - 4).");
+            System.out.println("Error: Please enter a valid menu option (1 - 5).");
         }
     }
 
@@ -94,7 +94,7 @@ public class ToDoList {
                 manager.saveToFile();
                 break;
             default:
-                System.out.println("Error: Please enter a valid menu option (1 - 4).");
+                System.out.println("Error: Please enter a valid menu option (1 - 5).");
                 break;
         }
     }

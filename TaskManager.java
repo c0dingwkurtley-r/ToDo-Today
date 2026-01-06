@@ -83,4 +83,8 @@ public class TaskManager{
         }
         return sb.toString();
     }
+
+    public int getSize(){
+        return list.size();
+    }
 }

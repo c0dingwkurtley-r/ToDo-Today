@@ -75,6 +75,7 @@ public class ToDoList {
                 System.out.println("Enter task number to edit:");
                 if (in.hasNextInt()){
                     int edit = in.nextInt();
+                    in.nextLine();
                     if (edit <= manager.getSize()) {
                         System.out.println("Enter new task description:");
                         String newTask = in.nextLine();

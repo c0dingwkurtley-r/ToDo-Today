@@ -43,7 +43,7 @@ public class TaskManager{
         try (FileWriter writer = new FileWriter(filename)){
             //loop to add all elements of the ArrayList to the file in appropriate format
             for (Task t: list){
-                writer.write(t.getTask()+"*"+t.getStatus());
+                writer.write(t.getTask()+"*"+t.getStatus()+"\n");
             }
 
         } catch (IOException e){

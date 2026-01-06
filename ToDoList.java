@@ -45,10 +45,14 @@ public class ToDoList {
                 System.out.println("Enter task number to delete:");
                 if (in.hasNextInt()){
                     int del = in.nextInt();
-                    manager.deleteTask(del);
-                    System.out.println("Task successfully deleted.");
+                    if (del <= manager.getSize()) {
+                        manager.deleteTask(del);
+                        System.out.println("Task successfully deleted.");
+                    } else {
+                        System.out.println("Error: Enter a valid task number.");
+                    }
                 } else {
-                    System.out.println("Error: Invalid task number.");
+                    System.out.println("Error: Enter an integer value.");
                 }
                 break;
             case 3:
@@ -56,10 +60,14 @@ public class ToDoList {
                 System.out.println("Enter task number to change status: ");
                 if (in.hasNextInt()){
                     int change = in.nextInt();
-                    manager.changeStatus(change);
-                    System.out.println("Task status changed successfully.");
+                    if (change <= manager.getSize()) {
+                        manager.changeStatus(change);
+                        System.out.println("Task status changed successfully.");
+                    } else{
+                        System.out.println("Error: Enter a valid task number.");
+                    }
                 } else {
-                    System.out.println("Error: Invalid task number.");
+                    System.out.println("Error: Enter an integer value.");
                 }
                 break;
             case 4:
@@ -67,10 +75,16 @@ public class ToDoList {
                 System.out.println("Enter task number to edit:");
                 if (in.hasNextInt()){
                     int edit = in.nextInt();
-                    System.out.println("Enter new task description:");
-                    String newTask = in.nextLine();
-                    manager.changeTask(edit,newTask);
-                    System.out.println("Task successfully updated.");
+                    if (edit <= manager.getSize()) {
+                        System.out.println("Enter new task description:");
+                        String newTask = in.nextLine();
+                        manager.changeTask(edit, newTask);
+                        System.out.println("Task successfully updated.");
+                    } else {
+                        System.out.println("Error: Enter a valid task number.");
+                    }
+                } else {
+                    System.out.println("Error: Enter an integer value.");
                 }
                 break;
             case 5:

@@ -9,7 +9,7 @@ public class ToDoList {
     public static void main(String[] args){
         in = new Scanner(System.in);
         manager = new TaskManager("tasks.txt");
-        System.out.printf("Welcome to ToDo-Today!!%n%n");
+        System.out.printf("%nWelcome to ToDo-Today!!%n");
 
         do {
             displayMenu();
@@ -19,8 +19,8 @@ public class ToDoList {
     }
 
     public static void displayMenu(){
-        System.out.printf("Your to do list:%n%s%n",manager.toString()); //print most updated task list
-        System.out.printf("1. Add new task%n2. Delete a task%n3. Change task status%n4. Change task description%n5. Close application%n%n");
+        System.out.printf("%nYour to do list:%n%s%n",manager.toString()); //print most updated task list
+        System.out.printf("(1) Add new task%n(2) Delete a task%n(3) Change task status%n(4) Change task description%n(5) Close application%n%n");
 
         if (in.hasNextInt()) {
             option = in.nextInt();

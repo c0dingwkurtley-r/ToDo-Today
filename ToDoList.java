@@ -1,5 +1,7 @@
 //main class which handles user input and output to console
 import java.util.Scanner;
+import java.io.File;
+import java.io.IOException;
 
 public class ToDoList {
     private static Scanner in;
@@ -8,7 +10,16 @@ public class ToDoList {
 
     public static void main(String[] args){
         in = new Scanner(System.in);
-        manager = new TaskManager("tasks.txt");
+        //create file at runtime if not present
+        try {
+            File tasks = new File("tasks.txt");
+            tasks.createNewFile();
+            manager = new TaskManager("tasks.txt");
+        } catch (IOException e){
+            System.out.println("Error in creating file.");
+            System.exit(1);
+        }
+
         System.out.printf("%nWelcome to ToDo-Today!!%n");
 
         do {

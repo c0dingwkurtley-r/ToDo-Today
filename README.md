@@ -13,21 +13,21 @@ The project demonstrates core programming concepts such as command-line input ha
 
 ## How to run
 Clone the repository:
-'''bash
+```bash
 git clone https://github.com/c0dingwkurtley-r/ToDo-Today
-'''
+```
 Navigate to the project directory:
-'''bash
+```bash
 cd ToDo-Today
-'''
+```
 Compile the program:
-'''bash
+```bash
 javac *.java
-'''
+```
 Run the program:
-'''bash
+```bash
 java ToDoList
-'''
+```
 
 ## Technologies Used
 - Java
